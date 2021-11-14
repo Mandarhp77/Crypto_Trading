@@ -7,26 +7,20 @@ import ccxt, time
 import threading
 
 def List():
-    la = requests.get("https://www.binance.com/bapi/composite/v1/public/cms/article/catalog/list/query?catalogId=48&pageNo=1&pageSize=15")
-    la = la.json()
-    List.la = la['data']['articles'][0]['title']
-    #List.la = ("Binance Will List manar patil(LINA)")
-        
-    a = List.la.split()
-    print(a)
+    #la = requests.get("https://www.binance.com/bapi/composite/v1/public/cms/article/catalog/list/query?catalogId=48&pageNo=1&pageSize=15")
+    #la = la.json()
+    #List.la = la['data']['articles'][0]['title']
+    List.la = ("Binance Will List manar patil(LINA)")
     
-    List.b = ['Binance','Will','List']
-    print(List.b)
-    
-    List.c = a[:3]
+    a = List.la.split()    
+    List.b = ['Binance','Will','List']    
+    List.c = a[:3]    
     print(List.c)
     
-List()
-
-'''def time():   
-    threading.Timer(10.0, time).start()
+def time():   
+    threading.Timer(5.0, time).start()
     List()
-time()'''
+time()
 
 
 if (List.c)==(List.b):
@@ -50,11 +44,11 @@ symbol = (f'{f}/USDT')
 symbols = [symbol for symbol in [market['symbol'] for market in markets]]
 
 if symbol in symbols:
-    print(f"Good news!, {symbol} exists in Gate.io")
-       
+    print(f"Good news!, {symbol} exists in Gate.io")       
 else:
     print(f"Sorry, {symbol} does not exist in Gate.io")
-       
+
+      
 global entryPrice
 price = exchange.fetch_ticker(symbol)['last']
 entryPrice = price
@@ -90,4 +84,6 @@ buy(symbol)'''
     message = f"You have {coin_balance} {coin} in your account. Selling them for {price}"
     print(message)
 sell(symbol)'''
+  
+
   
