@@ -10,7 +10,7 @@ def List():
     #la = requests.get("https://www.binance.com/bapi/composite/v1/public/cms/article/catalog/list/query?catalogId=48&pageNo=1&pageSize=15")
     #la = la.json()
     #List.la = la['data']['articles'][0]['title']
-    List.la = ("Binance Will List manar patil(LINA)")
+    List.la = ("Binance Will List manar patil(ADA)")
     
     a = List.la.split()    
     List.b = ['Binance','Will','List']    
