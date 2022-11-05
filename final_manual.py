@@ -32,7 +32,7 @@ else:
 
 exchange = ccxt.gateio({
 'apiKey': '4ab66d7de8ca62ce8',
-'secret': '9ada5a239acdffbb6c36541256e830114bf174a47657a32',
+'secret': '9ada514bf174a47657a32',
 })
 
 markets = exchange.fetch_markets()
